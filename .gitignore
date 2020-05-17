@@ -4,5 +4,9 @@
 # Python Virtual Environment
 .venv
 
+# Python Compiled Bytecode
+*.pyc
+__pycache__/
+
 # Runtime Environment
 instance/
