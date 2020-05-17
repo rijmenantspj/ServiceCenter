@@ -28,6 +28,10 @@ def create_app(test_config=None):
     from . import DatabaseManager
     DatabaseManager.init_app(app)
 
+    # Import and register the AuthenticationManager (Blueprint).
+    from . import AuthenticationManager
+    app.register_blueprint(AuthenticationManager.bp)
+
     # Import and register the Dashboard (Blueprint).
     from . import Dashboard
     app.register_blueprint(Dashboard.bp)
