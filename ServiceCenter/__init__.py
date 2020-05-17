@@ -1,6 +1,7 @@
 import os
 
 from flask import Flask
+from flask_bootstrap import Bootstrap
 
 
 def create_app(test_config=None):
@@ -19,5 +20,8 @@ def create_app(test_config=None):
         os.makedirs(app.instance_path)
     except OSError:
         pass
+
+    # Add Bootstrap to the app.
+    Bootstrap(app)
 
     return app
