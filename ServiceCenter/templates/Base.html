@@ -4,3 +4,8 @@
   {{super()}}
   <link rel="stylesheet" href="{{ url_for('static', filename='Style.css') }}">
 {% endblock %}
+
+{% block scripts %}
+  <script src="{{url_for('static', filename='Script.js')}}"></script>
+  {{super()}}
+{% endblock %}
