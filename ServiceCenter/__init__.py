@@ -24,4 +24,8 @@ def create_app(test_config=None):
     # Add Bootstrap to the app.
     Bootstrap(app)
 
+    # Import and initialize the DatabaseManager.
+    from . import DatabaseManager
+    DatabaseManager.init_app(app)
+
     return app
