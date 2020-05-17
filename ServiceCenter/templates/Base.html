@@ -7,6 +7,30 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='Style.css') }}">
 {% endblock %}
 
+{% block navbar %}
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Menu</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Service Center</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <!-- Items -->
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <!-- Items -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+{% endblock %}
+
 {% block scripts %}
   <script src="{{url_for('static', filename='Script.js')}}"></script>
   {{super()}}
